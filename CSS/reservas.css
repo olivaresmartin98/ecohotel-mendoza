@@ -1,0 +1,168 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff; 
+}
+
+/* Header */
+header {
+  background-color: rgba(58, 141, 76, 0.9); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  margin-top: 1.2rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #388e3c;
+}
+
+/* Fondo para la sección de reservas */
+.reservas-bg {
+  background-image: url('../img/reservas.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+/* Formulario de reserva */
+.reserva-form {
+  background-color: rgba(0, 80, 40, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reserva-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.reserva-form input,
+.reserva-form textarea {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+}
+
+.reserva-form input:focus,
+.reserva-form textarea:focus {
+  outline: 2px solid #4caf50;
+}
+
+.reserva-form .btn {
+  background-color: #3a8d4c;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-style: normal;
+  font-weight: 600;
+  border: 1px solid #1d5f2c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reserva-form .btn:hover {
+  background-color: #2e7038;
+}
+
+/* Botón destacado de sección */
+.boton-reserva-destacado {
+  background-color: #fff8ec;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000020;
+}
+
+.boton-reserva-destacado h2 {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(58, 141, 76, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-footer img {
+  width: 80px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .reserva-form {
+    padding: 1.5rem;
+  }
+
+  .boton-reserva-destacado h2 {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+  }
+}

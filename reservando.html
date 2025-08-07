@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Martin Olivares y Agustin Stallocca"/>
+  <link rel="icon" href="img/logo-favicon.png" type="image/png"/>
+  <title>Enviando reserva...</title>
+  <link rel="stylesheet" href="style.css">
+  
+<style>
+    
+    body {
+      background-color: #f9f9e5;
+      font-family: 'Montserrat', sans-serif;
+      color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: space-between;
+    }
+
+    header {
+  background-color: rgba(58, 141, 76, 0.9); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+    .loader-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .circle-loader {
+      border: 8px solid #c8e6c9;
+      border-top: 8px solid #4caf50;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: none;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .spin {
+      animation: spin 1s linear infinite;
+      opacity: 1;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .mensaje-envio {
+      font-size: 1.2rem;
+      color: #3a8d4c;
+      font-weight: 600;
+    }
+
+    /* Footer */
+footer {
+  background-color: rgba(58, 141, 76, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-footer img {
+  width: 80px;
+  height: auto;
+}
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="logo">EcoHotel Mendoza</div>
+  </header>
+
+  <div class="loader-container">
+    <div id="loader" class="circle-loader"></div>
+    <p class="mensaje-envio">Enviando su reserva a <br><strong>ecohotelmendoza@email.com</strong></p>
+  </div>
+
+  <footer>
+    <p>© 2025 EcoHotel Mendoza. Todos los derechos reservados.</p>
+    <div class="logo-footer">
+      <img src="img/logo footer.png" alt="Logo EcoHotel">
+    </div>
+  </footer>
+
+  <script>
+    // Inicia animación después de que se cargue la página
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.classList.add('spin');
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+
+    });
+  </script>
+
+</body>
+</html>
+
